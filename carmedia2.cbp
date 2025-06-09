@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="carmedia2" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/carmedia2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="$make -f -j4 $makefile $target" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean$target" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f -j4 $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/carmedia2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Makefile" />
+		<Unit filename="animation.cpp" />
+		<Unit filename="animation.h" />
+		<Unit filename="audioplayer.cpp" />
+		<Unit filename="audioplayer.h" />
+		<Unit filename="button.cpp" />
+		<Unit filename="button.h" />
+		<Unit filename="common.cpp" />
+		<Unit filename="common.h" />
+		<Unit filename="filebrowser.cpp" />
+		<Unit filename="filebrowser.h" />
+		<Unit filename="image.cpp" />
+		<Unit filename="image.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="phonelib/phonelib.cpp" />
+		<Unit filename="phonelib/phonelib.h" />
+		<Unit filename="phonelib/proxies/deviceproxy.h" />
+		<Unit filename="phonelib/proxies/mediaplayerproxy.h" />
+		<Unit filename="phonelib/proxies/obexclientproxy.h" />
+		<Unit filename="phonelib/proxies/objectmanagerproxy.h" />
+		<Unit filename="phonelib/proxies/phonebookaccessproxy.h" />
+		<Unit filename="phonelib/proxies/propertiesproxy.h" />
+		<Unit filename="phonelib/proxies/transferproxy.h" />
+		<Unit filename="settings.h" />
+		<Unit filename="touch.cpp" />
+		<Unit filename="touch.h" />
+		<Unit filename="utf8.h" />
+		<Unit filename="video.cpp" />
+		<Unit filename="video.h" />
+		<Unit filename="wt32i.cpp" />
+		<Unit filename="wt32i.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

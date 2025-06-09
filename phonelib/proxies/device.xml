@@ -1,0 +1,82 @@
+<!DOCTYPE node
+  PUBLIC '-//freedesktop//DTD D-BUS Object Introspection 1.0//EN'
+  'http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd'>
+<node>
+	<interface name="org.freedesktop.DBus.Introspectable">
+		<method name="Introspect">
+			<arg direction="out" name="xml" type="s"/>
+		</method>
+	</interface>
+	<interface name="org.bluez.Device1">
+		<method name="Disconnect"/>
+		<method name="Connect"/>
+		<method name="ConnectProfile">
+			<arg direction="in" name="UUID" type="s"/>
+		</method>
+		<method name="DisconnectProfile">
+			<arg direction="in" name="UUID" type="s"/>
+		</method>
+		<method name="Pair"/>
+		<method name="CancelPairing"/>
+		<property access="read" name="Address" type="s"/>
+		<property access="read" name="Name" type="s"/>
+		<property access="readwrite" name="Alias" type="s"/>
+		<property access="read" name="Class" type="u"/>
+		<property access="read" name="Appearance" type="q"/>
+		<property access="read" name="Icon" type="s"/>
+		<property access="read" name="Paired" type="b"/>
+		<property access="readwrite" name="Trusted" type="b"/>
+		<property access="readwrite" name="Blocked" type="b"/>
+		<property access="read" name="LegacyPairing" type="b"/>
+		<property access="read" name="RSSI" type="n"/>
+		<property access="read" name="Connected" type="b"/>
+		<property access="read" name="UUIDs" type="as"/>
+		<property access="read" name="Modalias" type="s"/>
+		<property access="read" name="Adapter" type="o"/>
+	</interface>
+	<interface name="org.freedesktop.DBus.Properties">
+		<method name="Get">
+			<arg direction="in" name="interface" type="s"/>
+			<arg direction="in" name="name" type="s"/>
+			<arg direction="out" name="value" type="v"/>
+		</method>
+		<method name="Set">
+			<arg direction="in" name="interface" type="s"/>
+			<arg direction="in" name="name" type="s"/>
+			<arg direction="in" name="value" type="v"/>
+		</method>
+		<method name="GetAll">
+			<arg direction="in" name="interface" type="s"/>
+			<arg direction="out" name="properties" type="a{sv}"/>
+		</method>
+		<signal name="PropertiesChanged">
+			<arg name="interface" type="s"/>
+			<arg name="changed_properties" type="a{sv}"/>
+			<arg name="invalidated_properties" type="as"/>
+		</signal>
+	</interface>
+	<interface name="org.bluez.Network1">
+		<method name="Connect">
+			<arg direction="in" name="uuid" type="s"/>
+			<arg direction="out" name="interface" type="s"/>
+		</method>
+		<method name="Disconnect"/>
+		<property access="read" name="Connected" type="b"/>
+		<property access="read" name="Interface" type="s"/>
+		<property access="read" name="UUID" type="s"/>
+	</interface>
+	<interface name="org.bluez.MediaControl1">
+		<method name="Play"/>
+		<method name="Pause"/>
+		<method name="Stop"/>
+		<method name="Next"/>
+		<method name="Previous"/>
+		<method name="VolumeUp"/>
+		<method name="VolumeDown"/>
+		<method name="FastForward"/>
+		<method name="Rewind"/>
+		<property access="read" name="Connected" type="b"/>
+	</interface>
+	<node name="fd3"/>
+	<node name="player0"/>
+</node>

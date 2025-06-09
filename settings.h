@@ -1,0 +1,24 @@
+#define SCREEN_WIDTH                    1280
+#define SCREEN_HEIGHT                   800
+
+#define SCREEN_BPP                      32
+
+
+#define FILEBROWSER_CNT_ITEMS_PER_ROW   6
+#define FILEBROWSER_BUTTON_WIDTH        300
+#define FILEBROWSER_BUTTON_HEIGHT       60
+#define FILEBROWSER_BUTTON_HSPACING     20
+#define FILEBROWSER_BUTTON_VSPACING     20
+
+#define CONTACTS_CNT_ITEMS_PER_ROW      3
+#define CONTACTS_BUTTON_WIDTH           410
+#define CONTACTS_BUTTON_HEIGHT          140
+#define CONTACTS_BUTTON_HSPACING        10
+#define CONTACTS_BUTTON_VSPACING        10
+
+#define PLAYER_BUTTONS_H_SPACING        40
+#define PLAYER_BUTTONS_BOTTOM_SPACING   120
+
+// TODO: use defines
+//int SCREEN_WIDTH = 1280;
+//int SCREEN_HEIGHT = 800;
